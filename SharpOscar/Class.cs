@@ -716,5 +716,29 @@ namespace SharpOscar
             /// </summary>
             ServiceSpecificReason       = 15
         }
+
+        /// <summary>
+        /// Class: ICBM__CLIENT_ERRORS
+        ///
+        /// The following are Inter-Client error codes.
+        /// </summary>
+        public enum IcbmClientErrors
+        {
+            /// <summary>
+            /// Receiving client does not understand the channel
+            /// </summary>
+            UnsupportedChannel          = 1,
+
+            /// <summary>
+            /// Receiving client thinks the payload is busted
+            /// </summary>
+            BustedIcbmPayload           = 2,
+
+            /// <summary>
+            /// See ICBM__RENDEZVOUS_NAK which will be inside the errorInfo 
+            /// for values for ICBM__CHANNEL_RENDEZVOUS
+            /// </summary>
+            ChannelSpecificError        = 3
+        }
     }
 }
